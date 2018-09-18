@@ -8,9 +8,10 @@ describe('<StatusSection />', () => {
     shallow(<StatusSection guesses={[1, 2, 3]}/>);
   });
 
-  // KEEP GOING ON THIS LATER
-  // it('Renders a section for the components', () => {
-  //   const wrapper = shallow(<StatusSection guessCount={4} />);
-  //   expect(wrapper.contains(<section></section>));
-  // });
+  it('Renders a section for the components', () => {
+    const guesses = [1, 2, 3];
+    const guessCount = 3;
+    const wrapper = shallow(<StatusSection guessCount={guessCount} guesses={guesses} />);
+    expect(wrapper.contains(<section></section>));
+  });
 });
