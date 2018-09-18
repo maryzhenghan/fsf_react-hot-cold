@@ -9,7 +9,7 @@ export default class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      guesses: [],
+      guesses: [1, 2, 3],
       feedback: 'Make your guess!',
       auralStatus: '',
       correctAnswer: Math.floor(Math.random() * 100) + 1
@@ -18,7 +18,7 @@ export default class Game extends React.Component {
 
   restartGame() {
     this.setState({
-      guesses: [],
+      guesses: [1, 2, 3],
       feedback: 'Make your guess!',
       auralStatus: '',
       correctAnswer: Math.floor(Math.random() * 100) + 1
@@ -92,7 +92,7 @@ export default class Game extends React.Component {
             guessCount={guessCount}
             onMakeGuess={guess => this.makeGuess(guess)}
           />
-          <StatusSection guesses={guesses} 
+          <StatusSection guesses={guesses}
             auralStatus={auralStatus}
           />
           <InfoSection />
