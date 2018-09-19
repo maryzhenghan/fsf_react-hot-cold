@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: KnTp/BVaQmJ2JysALFgI51St+wxJzrz7FBP2RzcbzrxXAvw+rO/QWbay2wgnxBGM1i9UQcxK7vA3LOGIIUqNi0Rs6kqQ0/e2kZoz3AP/fHlgv0jl01fu2C6txeqiEtlCJxzHsYa8dwMcZKDTK1V7XgTAhNksjLf4oQ0hcWJSIEgPElKz2ksys1GD8nXH5oCkeG4Vl9qZBfdP5S4KrK9Pe/Er4Wn16z8k5TzpeS0gk2sp3pILOFZ5mJ+CAYGJi9oFafzPhJciwP/TagoNk2BfYwUnSwkAjz1x+05weOuuTGQZDI3tBg4jJILSNEbwtRJpg7TPueXJrD4KXuE/0MlVzx9Z8BolJKErViPDcq1qQg8/lt4OhozHrDv71TUnWUaULvDd+NgwdatkgZg0P0yzlBewW5UCxdFiIJLFrsa7cCPSiCY0b0rQyZcPGkQJDZdL/FoY/mG/RvwUtxGRi63RFHBkxQqojTNRX0+s236G+seMpVck3V8WyjAsnNojijQasSazBaeQuzf4c9zCxSLUdbVg4sJjlIpiq7GwLEVXOQZhVHDLore8rDQRgb7Qf7E2K+FplBoXESTtqm6mI2mMAKRhpOyMlTxvZATN1Kz4oLEjWZZXJX4W8Lu44oEX9C1OshGEHG4/cmrqx6chAKbnCbGZV69tRHlsVwJrGmNrzvM=
+  app: 'yes'
+  on:
+    repo: maryzhenghan/react-hot-cold
